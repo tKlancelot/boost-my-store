@@ -1,0 +1,26 @@
+p,span,div{
+    font-family: $font-primary;
+}
+
+.catch-phrase__body,
+.how-it-works__body__heading{
+    p{
+        text-align: center;
+        font-size: 0.96vw;
+        width: 84%;
+    }
+}
+
+.feature-banner{
+    .grid{
+        &__item{
+            &__content{
+                p{
+                    text-align: center;
+                    width: 80%;
+                    margin: auto;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+ul,li,a{
+    font-family: $font-primary;
+}
+
+#site-navigation-menu-toggle{
+    display: none;
+}
+
+.menu{
+    .nav-menu{
+        .current_page_item{
+            a{
+                color:$secondary;
+            }
+        }
+    }
+}

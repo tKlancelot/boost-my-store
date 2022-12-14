@@ -1,0 +1,18 @@
+header{
+    display: flex;
+    min-height: 4.8vw;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vw;
+    nav{
+        .menu{
+            display: flex;
+            .nav-menu{
+                display: flex;
+                li{
+                    margin:auto 2vw;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+button{
+    cursor: pointer;
+    font-family: $font-primary;
+}
+
+.accordion__body__item {
+    &__header {
+        button {
+            @include flex-center-center;
+            background:unset;
+            border: unset;
+            cursor: pointer;
+            border-radius: 50%;
+            padding: 0.5vw;
+        }
+
+        .trigger {
+            svg {
+                transition: 0.32s linear all;
+                width: 16px;
+                height: 16px;
+                path{
+                    stroke:$write;
+                }
+            }
+
+            svg.rotate {
+                transform: rotate(270deg);
+
+                path {
+                    &:nth-child(1) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

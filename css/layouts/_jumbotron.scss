@@ -1,0 +1,15 @@
+.jumbotron{
+    &__body{
+        min-height: 28vw;
+        @include flex-column-center-center;
+        justify-content: flex-start;
+        padding-top: 4vw;
+        background-image:
+        radial-gradient(circle at 12% 80%, $secondary-transparent 0%, $secondary-transparent 32%, transparent 32%, transparent 100%),
+        radial-gradient(circle at 80% 40%, $secondary-transparent 0%, $secondary-transparent 32%, transparent 32%, transparent 100%),
+        radial-gradient(circle at 60% 2%, $secondary-transparent 0%, $secondary-transparent 16%, transparent 16%, transparent 100%),
+        linear-gradient(0deg,$primary,#ffdb77);
+        // clip-path: polygon(0 0, 100% 0, 100% 84%, 0 98%);
+        gap:2vw;
+    }
+}

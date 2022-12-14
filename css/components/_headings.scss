@@ -1,0 +1,73 @@
+h2,h1,h3{
+    font-family: $font-primary-bold;
+    color:$write;
+}
+
+.jumbotron{
+    &__body{
+        h1{
+            font-size: 2.4vw;
+        }
+    }
+}
+
+.catch-phrase{
+    &__body{
+        @include flex-column-center-center;
+        gap:1vw;
+        h2{
+            font-size: 2vw;
+            span{
+                color:$secondary;
+            }
+        }
+    }
+}
+
+ul.products li.product
+.woocommerce-loop-product__title{
+    text-decoration: none;
+    font-size: 1.2vw;
+    text-align: center;
+    &::first-letter{
+        text-transform: uppercase;
+    }
+}
+
+.how-it-works{
+    &__body{
+        &__heading{
+            h2{
+                // color:$secondary;
+                font-size: 2vw;
+            }
+        }
+    }
+}
+
+.accordion__body__item{
+    &__header{
+        h3{
+            color:$write;
+            font-size: 0.92vw;
+            &::first-letter{
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+.feature-banner{
+    .grid{
+        &__item{
+            &__heading{
+                h3{
+                    color:$alternative;
+                    text-transform: uppercase;
+                    letter-spacing: 0.072vw;
+                    font-size: 1.04vw;
+                }
+            }
+        }
+    }
+}
