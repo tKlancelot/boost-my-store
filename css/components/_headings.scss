@@ -6,19 +6,22 @@ h2,h1,h3{
 .jumbotron{
     &__body{
         h1{
-            font-size: 2.4vw;
+            font-size: 1.1vw;
+            color:$write;
         }
     }
 }
 
 .catch-phrase{
     &__body{
-        @include flex-column-center-center;
+        display: flex;
+        flex-direction: column;
         gap:1vw;
         h2{
-            font-size: 2vw;
+            font-size: 2.8vw;
+            color:$primary;
             span{
-                color:$secondary;
+                color:$write;
             }
         }
     }
@@ -28,7 +31,6 @@ ul.products li.product
 .woocommerce-loop-product__title{
     text-decoration: none;
     font-size: 1.2vw;
-    text-align: center;
     &::first-letter{
         text-transform: uppercase;
     }

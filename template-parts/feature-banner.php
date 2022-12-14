@@ -4,7 +4,7 @@ $upOne = dirname(__DIR__, 1);
 $path = $upOne.'/classes/IconsENFT.php';
 require_once($path);
 $librairie_icons = new IconsENFT();
-$theme_color = '#00AE43';
+$theme_color = '#F24E1D';
 
 ?>
 
@@ -19,7 +19,7 @@ $theme_color = '#00AE43';
                     <h3>sans contact</h3>
                 </div>
                 <div class="grid__item__picto">
-                    <?= $librairie_icons->renderSvg('chrono',$theme_color);?>
+                    <?= $librairie_icons::chrono($theme_color);?>
                 </div>
             </div>
             <div class="grid__item">
@@ -44,6 +44,9 @@ d’avis Google</p>
                 <div class="grid__item__picto">
                     <?= $librairie_icons->renderSvg('credit-card',$theme_color);?>
                 </div>
+            </div>
+            <div>
+
             </div>
         </div>
         <div class="cta">

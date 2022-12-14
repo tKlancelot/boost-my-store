@@ -1,21 +1,21 @@
 /*!
-Theme Name: boost-my-store
+Theme Name: ecommerce-basic
 Theme URI: https://underscores.me/
 Author: Automattic
 Author URI: https://automattic.com/
-Description: Hi. I'm a starter theme called <code>boost-my-store</code>, or <em>underscores</em>, if you like. I'm a theme meant for hacking so don't use me as a <em>Parent Theme</em>. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
+Description: Hi. I'm a starter theme called <code>ecommerce-basic</code>, or <em>underscores</em>, if you like. I'm a theme meant for hacking so don't use me as a <em>Parent Theme</em>. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
 Version: 1.0.0
 Tested up to: 5.4
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
 License URI: LICENSE
-Text Domain: boost-my-store
+Text Domain: ecommerce-basic
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned.
 
-boost-my-store is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+ecommerce-basic is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 Normalizing styles have been helped along thanks to the fine work of
@@ -944,33 +944,36 @@ textarea {
   src: url("http://localhost:10008/wp-content/themes/boost-my-store/fonts/Poppins/Poppins-Bold.ttf") format("truetype");
   font-display: swap;
 }
+body {
+  background-color: #F9F9F9;
+}
+
 h2, h1, h3 {
   font-family: "Poppins Bold";
   color: #5E5D5D;
 }
 
 .jumbotron__body h1 {
-  font-size: 2.4vw;
+  font-size: 1.1vw;
+  color: #5E5D5D;
 }
 
 .catch-phrase__body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   gap: 1vw;
 }
 .catch-phrase__body h2 {
-  font-size: 2vw;
+  font-size: 2.8vw;
+  color: #F24E1D;
 }
 .catch-phrase__body h2 span {
-  color: #ef4022;
+  color: #5E5D5D;
 }
 
 ul.products li.product .woocommerce-loop-product__title {
   text-decoration: none;
   font-size: 1.2vw;
-  text-align: center;
 }
 ul.products li.product .woocommerce-loop-product__title::first-letter {
   text-transform: uppercase;
@@ -1047,7 +1050,6 @@ p, span, div {
 
 .catch-phrase__body p,
 .how-it-works__body__heading p {
-  text-align: center;
   font-size: 0.96vw;
   width: 84%;
 }
@@ -1078,15 +1080,22 @@ p, span, div {
   align-items: center;
 }
 .jumbotron__body {
-  min-height: 28vw;
+  min-height: 32vw;
   display: flex;
+  justify-content: flex-start;
+  gap: 2vw;
+}
+.jumbotron__body .flap {
+  display: grid;
+  grid-template-columns: 0.64fr 0.36fr;
+  width: 100%;
+  margin: auto 10%;
+}
+.jumbotron__body .flap__left {
+  display: flex;
+  align-items: flex-start;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  justify-content: flex-start;
-  padding-top: 4vw;
-  background-image: radial-gradient(circle at 12% 80%, rgba(239, 64, 34, 0.0941176471) 0%, rgba(239, 64, 34, 0.0941176471) 32%, transparent 32%, transparent 100%), radial-gradient(circle at 80% 40%, rgba(239, 64, 34, 0.0941176471) 0%, rgba(239, 64, 34, 0.0941176471) 32%, transparent 32%, transparent 100%), radial-gradient(circle at 60% 2%, rgba(239, 64, 34, 0.0941176471) 0%, rgba(239, 64, 34, 0.0941176471) 16%, transparent 16%, transparent 100%), linear-gradient(0deg, #f7bb18, #ffdb77);
-  gap: 2vw;
 }
 
 .how-it-works__body {
@@ -1119,7 +1128,7 @@ p, span, div {
   gap: 0.5vw;
 }
 .accordion__body__item {
-  border: 1px solid #f7bb18;
+  border: 1px solid #F24E1D;
   overflow: hidden;
   border-radius: 32px;
 }

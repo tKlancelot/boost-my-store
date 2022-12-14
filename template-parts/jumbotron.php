@@ -4,12 +4,19 @@
 
     </div>
     <div class="jumbotron__body">
-        <?php the_custom_logo(); ?>
-        <h1><?php echo esc_html(get_bloginfo('name'))?></h1>
-        <div class="catch-phrase">
-            <div class="catch-phrase__body">
-                <h2><?php echo html_entity_decode(get_bloginfo('description'));?></h2>
-                <p>description Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis, culpa vitae.</p>
+        <div class="flap">
+            <div class="flap__left">
+                <?php the_custom_logo(); ?>
+                <h1><?php echo esc_html(get_bloginfo('name'))?></h1>
+                <div class="catch-phrase">
+                    <div class="catch-phrase__body">
+                        <h2><?php echo html_entity_decode(get_bloginfo('description'));?></h2>
+                        <p>description Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis, culpa vitae.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flap__right">
+                flap right
             </div>
         </div>
     </div>
