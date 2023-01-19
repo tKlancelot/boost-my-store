@@ -107,7 +107,23 @@
     }
 }
 
+.woocommerce-message{
+    border-top-color: $primary!important;
+}
 
+.woocommerce-message::before{
+    color:$primary!important;
+}
+
+.woocommerce-error, .woocommerce-info, .woocommerce-message{
+    background-color: #FDF2EA!important;
+}
+
+.woocommerce-message{
+    .wc-forward.wp-element-button{
+        display: none;
+    }
+}
 
 @media screen and (max-width:800px){
 

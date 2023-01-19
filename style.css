@@ -1,36 +1,36 @@
 @font-face {
   font-family: "Poppins Regular";
-  src: url("https://bms.preprod-aileen.com//wp-content/themes/boost-my-store/fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+  src: url("http://boostmystore.fr/wp-content/themes/boost-my-store/fonts/Poppins/Poppins-Regular.ttf") format("truetype");
   font-display: swap;
 }
 @font-face {
   font-family: "Poppins Bold";
-  src: url("https://bms.preprod-aileen.com//wp-content/themes/boost-my-store/fonts/Poppins/Poppins-Bold.ttf") format("truetype");
+  src: url("https://boostmystore.fr/wp-content/themes/boost-my-store/fonts/Poppins/Poppins-Bold.ttf") format("truetype");
   font-display: swap;
 }
 @font-face {
   font-family: "Poppins Semi-Bold";
-  src: url("https://bms.preprod-aileen.com//wp-content/themes/boost-my-store/fonts/Poppins/Poppins-SemiBold.ttf") format("truetype");
+  src: url("https://boostmystore.fr/wp-content/themes/boost-my-store/fonts/Poppins/Poppins-SemiBold.ttf") format("truetype");
   font-display: swap;
 }
 @font-face {
   font-family: "Geomanist Bold";
-  src: url("https://bms.preprod-aileen.com//wp-content/themes/boost-my-store/fonts/geomanist/Geomanist-Bold.ttf") format("truetype");
+  src: url("https://boostmystore.fr/wp-content/themes/boost-my-store/fonts/geomanist/Geomanist-Bold.ttf") format("truetype");
   font-display: swap;
 }
 @font-face {
   font-family: "Geomanist Medium";
-  src: url("https://bms.preprod-aileen.com//wp-content/themes/boost-my-store/fonts/geomanist/Geomanist-Medium.ttf") format("truetype");
+  src: url("https://boostmystore.fr/wp-content/themes/boost-my-store/fonts/geomanist/Geomanist-Medium.ttf") format("truetype");
   font-display: swap;
 }
 @font-face {
   font-family: "Geomanist Regular";
-  src: url("https://bms.preprod-aileen.com//wp-content/themes/boost-my-store/fonts/geomanist/Geomanist-Regular.ttf") format("truetype");
+  src: url("https://boostmystore.fr/wp-content/themes/boost-my-store/fonts/geomanist/Geomanist-Regular.ttf") format("truetype");
   font-display: swap;
 }
 @font-face {
   font-family: "Inter Regular";
-  src: url("https://bms.preprod-aileen.com//wp-content/themes/boost-my-store/fonts/Inter/static/Inter-Regular.ttf") format("truetype");
+  src: url("https://boostmystore.fr/wp-content/themes/boost-my-store/fonts/Inter/static/Inter-Regular.ttf") format("truetype");
   font-display: swap;
 }
 .woocommerce .col2-set, .woocommerce-page .col2-set {
@@ -1730,6 +1730,22 @@ div[data-id=c1e3359] div[data-elementor-type=loop-item] div[data-element_type=co
   -webkit-transform: translate(4px, 4px);
   -ms-transform: translate(4px, 4px);
   transform: translate(4px, 4px);
+}
+
+.woocommerce-message {
+  border-top-color: #ff6d2c !important;
+}
+
+.woocommerce-message::before {
+  color: #ff6d2c !important;
+}
+
+.woocommerce-error, .woocommerce-info, .woocommerce-message {
+  background-color: #FDF2EA !important;
+}
+
+.woocommerce-message .wc-forward.wp-element-button {
+  display: none;
 }
 
 @media screen and (max-width: 800px) {
