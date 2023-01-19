@@ -18,3 +18,20 @@
         }
     }
 }
+
+#logotype-footer{
+    max-width: 160px;
+}
+
+@media screen and (max-width:800px){
+    #logotype-footer{
+        max-width: 36%;
+        .elementor-widget-container{
+            margin:auto;
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
+
+

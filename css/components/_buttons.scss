@@ -1,38 +1,60 @@
 button{
     cursor: pointer;
-    font-family: $font-primary;
+    font-family: $font-secondary;
 }
 
-.accordion__body__item {
-    &__header {
-        button {
-            @include flex-center-center;
-            background:unset;
-            border: unset;
-            cursor: pointer;
-            border-radius: 50%;
-            padding: 0.5vw;
-        }
-
-        .trigger {
-            svg {
-                transition: 0.32s linear all;
-                width: 16px;
-                height: 16px;
-                path{
-                    stroke:$write;
-                }
-            }
-
-            svg.rotate {
-                transform: rotate(270deg);
-
-                path {
-                    &:nth-child(1) {
-                        display: none;
-                    }
-                }
-            }
+#btn-scroll-to{
+    .elementor-button-content-wrapper{
+        display: flex;
+        align-items: center;
+    }
+    .elementor-button-link span{
+        &::first-letter{
+            text-transform: uppercase;
         }
     }
+    svg{
+        width: 100%!important;
+    }
+}
+
+
+.btn-bms{
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #2e2f35;
+    border-radius: 15px;
+    box-shadow: 3px 3px 0 0 #2e2f35;
+    transition: .2s;
+    background-color: #ff6d2c;
+    a{
+        cursor: pointer;
+        span{
+            font-family: $font-primary-medium;
+        }
+    }
+    &:hover{
+        box-shadow: 0 0 0 0 #2e2f35;
+        -webkit-transform: translate(4px, 4px);
+        -ms-transform: translate(4px, 4px);
+        transform: translate(4px, 4px)
+    }
+}
+
+.btn-bms.--white{
+    background-color: #fff;
+    a{
+        color:#2e2f35!important;
+    }
+}
+
+@media screen and (max-width:800px){
+
+    #btn-scroll-to{
+        svg{
+            width: 32px!important;
+            height: 32px!important;
+        }
+    }
+
 }

@@ -1,9 +1,14 @@
 // utils
 
-@import 'utils/reset';
 @import 'utils/typography';
 @import 'utils/variables';
 @import 'utils/mixins';
+@import 'utils/reset';
+@import 'utils/reset-woocommerce';
+@import 'utils/splide-slide';
+@import 'utils/splide-slide-core';
+@import 'utils/splide-default';
+@import 'utils/theme';
 // @import 'utils/animations';
 
 //base
@@ -17,12 +22,15 @@
 @import 'components/links';
 @import 'components/inputs';
 @import 'components/paragraphs';
+@import 'components/progress-bars';
+@import 'components/cards';
 
 //layouts
 
-// @import 'layouts/header';
+@import 'layouts/header';
 @import 'layouts/footer';
-@import 'layouts/jumbotron';
-@import 'layouts/accordions';
-@import 'layouts/carousel-products';
-@import 'layouts/feature-banner';
+@import 'layouts/elementor';
+@import 'layouts/scrolling-text';
+@import 'layouts/navbar';
+@import 'layouts/carousel';
+@import 'layouts/rewrite-woocommerce';

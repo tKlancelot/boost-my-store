@@ -12,31 +12,11 @@ if ( ! defined( '_S_VERSION' ) ) {
 	define( '_S_VERSION', '1.0.0' );
 }
 
-/**
- * Sets up theme defaults and registers support for various WordPress features.
- *
- * Note that this function is hooked into the after_setup_theme hook, which
- * runs before the init hook. The init hook is too late for some features, such
- * as indicating support for post thumbnails.
- */
+
 function ecommerce_basic_setup() {
-	/*
-		* Make theme available for translation.
-		* Translations can be filed in the /languages/ directory.
-		* If you're building a theme based on ecommerce-basic, use a find and replace
-		* to change 'ecommerce-basic' to the name of your theme in all the template files.
-		*/
+
 	load_theme_textdomain( 'ecommerce-basic', get_template_directory() . '/languages' );
 
-	// Add default posts and comments RSS feed links to head.
-	add_theme_support( 'automatic-feed-links' );
-
-	/*
-		* Let WordPress manage the document title.
-		* By adding theme support, we declare that this theme does not use a
-		* hard-coded <title> tag in the document head, and expect WordPress to
-		* provide it for us.
-		*/
 	add_theme_support( 'title-tag' );
 
 	/*
@@ -49,38 +29,10 @@ function ecommerce_basic_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
-			'menu-1' => esc_html__( 'Primary', 'ecommerce-basic' ),
+			'menu-header' => esc_html__( 'Primary', 'ecommerce-basic' ),
 		)
 	);
 
-	/*
-		* Switch default core markup for search form, comment form, and comments
-		* to output valid HTML5.
-		*/
-	add_theme_support(
-		'html5',
-		array(
-			'search-form',
-			'comment-form',
-			'comment-list',
-			'gallery',
-			'caption',
-			'style',
-			'script',
-		)
-	);
-
-	// Set up the WordPress core custom background feature.
-	add_theme_support(
-		'custom-background',
-		apply_filters(
-			'ecommerce_basic_custom_background_args',
-			array(
-				'default-color' => 'ffffff',
-				'default-image' => '',
-			)
-		)
-	);
 
 	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
@@ -102,17 +54,6 @@ function ecommerce_basic_setup() {
 }
 add_action( 'after_setup_theme', 'ecommerce_basic_setup' );
 
-/**
- * Set the content width in pixels, based on the theme's design and stylesheet.
- *
- * Priority 0 to make it available to lower priority callbacks.
- *
- * @global int $content_width
- */
-function ecommerce_basic_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'ecommerce_basic_content_width', 640 );
-}
-add_action( 'after_setup_theme', 'ecommerce_basic_content_width', 0 );
 
 /**
  * Register widget area.
@@ -143,37 +84,45 @@ function ecommerce_basic_scripts() {
 	wp_style_add_data( 'ecommerce-basic-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'ecommerce-basic-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'progress-bar-script', get_template_directory_uri() . '/js/progressbars.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'header-script', get_template_directory_uri() . '/js/header.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'checkout-script', get_template_directory_uri() . '/js/checkout.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'customizer', get_template_directory_uri() . '/js/customizer.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'splide-slide', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js', array(), _S_VERSION, true );
 
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
+	wp_enqueue_script('gsap', "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js",[],'3.10.4',false);
+    wp_enqueue_script('gsap-scroll-trigger', "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js",[],'3.10.4',false);
+    wp_enqueue_script('gsap-observer', "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/Observer.min.js",[],'3.10.4',false);
+    wp_enqueue_script('gsap-scrollTo', "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollToPlugin.min.js",[],'3.10.4',false);
+
 }
 add_action( 'wp_enqueue_scripts', 'ecommerce_basic_scripts' );
 
-/**
- * Implement the Custom Header feature.
- */
-require get_template_directory() . '/inc/custom-header.php';
+
+// Change add to cart text on single product page
+add_filter( 'woocommerce_product_single_add_to_cart_text', 'woocommerce_add_to_cart_button_text_single' ); 
+function woocommerce_add_to_cart_button_text_single() {
+    return __( 'Je commande', 'woocommerce' ); 
+}
+
+// Change add to cart text on product archives page
+add_filter( 'woocommerce_product_add_to_cart_text', 'woocommerce_add_to_cart_button_text_archives' );  
+function woocommerce_add_to_cart_button_text_archives() {
+    return __( 'Je commande', 'woocommerce' );
+}
+
 
 /**
- * Custom template tags for this theme.
- */
-require get_template_directory() . '/inc/template-tags.php';
-
-/**
- * Functions which enhance the theme by hooking into WordPress.
- */
-require get_template_directory() . '/inc/template-functions.php';
-
-/**
- * Customizer additions.
- */
-require get_template_directory() . '/inc/customizer.php';
-
-/**
- * Load Jetpack compatibility file.
- */
-if ( defined( 'JETPACK__VERSION' ) ) {
-	require get_template_directory() . '/inc/jetpack.php';
+* Modifier le texte du bouton "Ajouter au panier" par le texte "Afficher le produit"
+*/
+// Premièrement, nous supprimer le bouton "Ajouter au panier"
+remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10 );
+ 
+// Deuxièmement, nous créons le bouton "Afficher le produit" 
+add_action( 'woocommerce_after_shop_loop_item', 'wpt_custom_view_product_button', 10);
+	function wpt_custom_view_product_button() {
+	global $product;
+	$link = $product->get_permalink();
+	echo '<a href="' . $link . '" class="button wpt-custom-view-product-button">Afficher le produit</a>';
 }
 

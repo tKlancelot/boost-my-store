@@ -1,3 +1,17 @@
-textarea,input,::placeholder{
-    font-family: $font-primary;
+textarea,
+input,
+::placeholder {
+    font-family: $font-secondary;
+}
+
+// vendor - elementor 
+
+.wapf-field-input input[type=email],
+.wapf-field-input input[type=number],
+.wapf-field-input input[type=text],
+.wapf-field-input input[type=url],
+.wapf-field-input select,
+.wapf-field-input textarea {
+    padding: 0.5rem 0.5rem 0.4rem;
+    line-height: 1.4rem;
 }

@@ -1,0 +1,29 @@
+.navbar-fixed{
+    position: fixed!important;
+    width: 100%;
+    z-index: 99;
+    background: $white;
+    padding:0% 12% 0% 12%!important;
+    // border-bottom: 1px solid #d4d4d4;
+    .elementor-container.elementor-column-gap-default{
+        min-height: 4vw!important;
+        justify-content: space-between;
+        .elementor-column.elementor-col-50.elementor-inner-column.elementor-element.elementor-element-e7307e5{
+            width: 12.5%;
+            > div > div > div > a > img{
+                max-width: 72%;
+            }
+        }
+        .elementor-element-370f9ff .elementor-widget-container{
+            margin:1rem 4rem 1rem 2rem;
+        }
+    }
+}
+
+@media screen and (max-width:1600px){
+
+    .navbar-fixed{
+        padding:0% 10% 0% 10%!important;
+    }
+
+}

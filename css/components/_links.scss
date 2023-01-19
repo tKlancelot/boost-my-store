@@ -1,17 +1,26 @@
 ul,li,a{
-    font-family: $font-primary;
+    font-family: $font-secondary;
 }
 
-#site-navigation-menu-toggle{
-    display: none;
+ul,li{
+    &::marker{
+        font-size: larger;
+    }
+}
+
+a{
+    text-decoration: none;
+    color:$write;
+}
+
+a:visited{
+    color:$write;
 }
 
 .menu{
-    .nav-menu{
-        .current_page_item{
-            a{
-                color:$secondary;
-            }
-        }
+    a{
+        font-size: 22px;
+        font-family: $font-primary-semi-bold;
     }
 }
+

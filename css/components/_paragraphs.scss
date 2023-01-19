@@ -1,25 +1,49 @@
 p,span,div{
-    font-family: $font-primary;
+    font-family: $font-secondary;
 }
 
-.catch-phrase__body,
-.how-it-works__body__heading{
-    p{
-        font-size: 0.96vw;
-        width: 84%;
+
+.bubble{
+    &__body{
+        p{
+            text-align: center;
+        }
     }
 }
 
-.feature-banner{
-    .grid{
-        &__item{
-            &__content{
-                p{
-                    text-align: center;
-                    width: 80%;
-                    margin: auto;
+#stats{
+    .stats{
+        &__content{
+            .item{
+                i{
+                    font-style: normal;
                 }
             }
         }
     }
+}
+
+
+@media screen and (max-width:800px){
+
+    .bubble{
+        &__body{
+            p{
+                font-size: 13px;
+            }
+        }
+    }
+
+    #stats{
+        .stats{
+            &__content{
+                .item{
+                    span,i{
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+    }
+
 }

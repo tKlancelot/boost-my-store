@@ -1,31 +1,8 @@
 h2,h1,h3{
-    font-family: $font-primary-bold;
+    font-family: $font-primary-bold!important;
     color:$write;
 }
 
-.jumbotron{
-    &__body{
-        h1{
-            font-size: 1.1vw;
-            color:$write;
-        }
-    }
-}
-
-.catch-phrase{
-    &__body{
-        display: flex;
-        flex-direction: column;
-        gap:1vw;
-        h2{
-            font-size: 2.8vw;
-            color:$primary;
-            span{
-                color:$write;
-            }
-        }
-    }
-}
 
 ul.products li.product
 .woocommerce-loop-product__title{
@@ -36,38 +13,135 @@ ul.products li.product
     }
 }
 
-.how-it-works{
-    &__body{
+
+#rotate-heading{
+    strong{
+        font-size: 52px!important;
+    }
+    em{
+        color:#A7A7A7!important;
+        font-style: initial!important;
+    }
+}
+
+
+#carousel-heading{
+
+    h3{
+        font-size: 56px;
+        font-family: $font-primary-bold;
+        font-weight: 500;
+    }
+    > h3{
+    height: 6vw;
+    display: flex;
+    align-items: center;
+    }
+    .splide__slide{
+        h3{
+            color:$primary; 
+            font-family: $font-primary-bold!important;
+        }
+    }
+}
+
+
+#main-title *{
+    font-size: 68px;
+    font-family:$font-primary-bold;
+    margin-block-end: 0;
+    margin-block-start: 0;
+}
+
+#google-title,#main-title{
+    span{
+        font-family: 'Poppins';
+    }
+}
+
+
+.bubble{
+    &__heading{
+        h2{
+            color:$primary;
+        }
+    }
+}
+
+#stats{
+    .stats{
+        &__label{
+            h4{
+                font-family: $font-secondary;
+                font-weight: initial;
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1600px){
+
+    #carousel-heading{
+        h3{
+            font-size: 46px;
+        }
+    }
+
+    #main-title *{
+        font-size: 56px;
+    }
+
+    .bubble{
         &__heading{
             h2{
-                // color:$secondary;
-                font-size: 2vw;
+                font-size: 46px!important;
             }
         }
     }
+
+    #stats{
+        .stats{
+            &__label{
+                h4{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    
+
 }
 
-.accordion__body__item{
-    &__header{
+
+@media screen and (max-width:800px){
+
+    #carousel-heading{
         h3{
-            color:$write;
-            font-size: 0.92vw;
-            &::first-letter{
-                text-transform: uppercase;
+            font-size: 5.2vw;
+        }
+        > h3{
+        height: auto;
+        }
+    }
+
+    #main-title *{
+        font-size: 34px;
+    }
+
+    .bubble{
+        &__heading{
+            h2{
+                font-size: 32px!important;
             }
         }
     }
-}
 
-.feature-banner{
-    .grid{
-        &__item{
-            &__heading{
-                h3{
-                    color:$alternative;
-                    text-transform: uppercase;
-                    letter-spacing: 0.072vw;
-                    font-size: 1.04vw;
+    #stats{
+        .stats{
+            &__label{
+                h4{
+                    font-size: 10px;
                 }
             }
         }

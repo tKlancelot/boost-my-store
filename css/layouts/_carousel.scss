@@ -1,0 +1,36 @@
+#splide-02{
+    .splide__slide{
+        display: flex;
+        img{
+            margin: auto;
+            width: auto;
+            object-fit: scale-down;
+        }
+    }
+}
+
+
+@media screen and (max-width:1600px){
+
+    #splide-02{
+        .splide__slide{
+            img{
+                width: 160px;
+            }
+        }
+    }
+
+}
+
+
+@media screen and (max-width:800px){
+
+    #splide-02{
+        .splide__slide{
+            img{
+                width: 96px;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,20 @@
+#carousel-heading{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  .splide__slide{
+    display: flex;
+    align-items:center; 
+  }
+  
+  
+}
+
+
+@media screen and (max-width:800px){
+
+  #carousel-heading{
+    justify-content: flex-start;
+  }
+
+}

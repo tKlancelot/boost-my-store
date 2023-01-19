@@ -1,0 +1,364 @@
+
+
+.elementor-testimonial--align-center.elementor-testimonial--layout-image_above .elementor-testimonial__footer,
+.elementor-testimonial--align-center.elementor-testimonial--layout-image_inline .elementor-testimonial__footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.elementor-testimonial--align-center .elementor-testimonial {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    height: 100%;
+    gap: 1vw;
+}
+
+.elementor-testimonial__name {
+    text-align: center;
+}
+
+.elementor-testimonial--layout-image_inline .elementor-testimonial__footer {
+    margin-top: 0 !important;
+    gap: 0.5vw;
+}
+
+.elementor-testimonial__image img {
+    object-fit: contain !important;
+    width: 54px !important;
+    height: auto !important;
+}
+
+
+
+#carousel-presentation {
+    .splide {
+        &__slide {
+            @include flex-column-center-center;
+            background-color: $white;
+            gap: 1rem;
+        }
+    }
+}
+
+
+// accordeons
+
+
+.elementor-accordion .elementor-tab-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+
+
+.elementor-accordion-item:nth-child(1) {
+    border-radius: 32px 32px 0px 0px;
+    overflow: hidden;
+}
+
+.elementor-accordion-item:last-child {
+    border-radius: 0px 0px 32px 32px;
+    overflow: hidden;
+}
+
+
+.elementor-accordion .elementor-tab-title.elementor-active .elementor-accordion-icon-opened,
+.elementor-accordion .elementor-tab-title .elementor-accordion-icon .elementor-accordion-icon-closed {
+    border: 1px solid #A7A7A7;
+    background-color: #F9F9F9;
+    border-radius: 50%;
+    margin: auto;
+    padding: 0.75rem;
+    width: auto;
+    height: auto;
+}
+
+.elementor-accordion .elementor-tab-title .elementor-accordion-icon {
+    text-align: center !important;
+    float: unset !important;
+    line-height: 0px;
+}
+
+.elementor-accordion .elementor-tab-title .elementor-accordion-icon {
+    width: auto !important;
+}
+
+.elementor-tab-title .elementor-accordion-icon svg {
+    margin: auto;
+    width: 0.65em!important;
+    height: 0.65em!important;
+}
+
+
+#column-connect{
+    .elementor-widget-wrap.elementor-element-populated{
+        gap:1rem;
+    }
+}
+
+div[data-id="3a9457f"]{
+    .elementor-widget-wrap{
+        gap:1rem;
+    }
+}
+
+@media screen and (max-width:800px){
+    
+    .elementor-accordion .elementor-tab-title.elementor-active .elementor-accordion-icon-opened,
+    .elementor-accordion .elementor-tab-title .elementor-accordion-icon .elementor-accordion-icon-closed {
+        padding: 0.5rem;
+    }
+}
+
+
+
+// elementor pills 
+
+@function randomNum($min, $max) {
+    $rand: random();
+    $randomNum: $min + floor($rand * (($max - $min) + 1));
+  
+    @return $randomNum;
+}
+  
+
+
+.elementor-widget-progress {
+    .elementor-widget-container {
+        display: grid;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        gap: 1rem;
+        grid-template-columns: 0.28fr auto;
+        .elementor-progress-wrapper {
+            height: auto;
+            display: flex;
+        }
+        .elementor-title{
+            flex-basis: 32%;
+        }
+
+        .progress-info {
+            width: 100%;
+
+            .elementor-progress-bar {
+                height: auto!important;
+                justify-content: space-between;
+                flex-direction: row-reverse;
+                padding: 0.5rem;
+            }
+
+            .elementor-progress-percentage {
+                align-items: center;
+                display: flex;
+
+            }
+        }
+    }
+}
+
+
+div[data-id="dc5b0d6"]{
+    .elementor-widget-container{
+        .progress-info{
+            width: 96%!important;
+        }
+    }
+}
+div[data-id="aec38af"]{
+    .elementor-widget-container{
+        .progress-info{
+            width: 92%!important;
+        }
+    }
+}
+div[data-id="fd40cb1"]{
+    .elementor-widget-container{
+        .progress-info{
+            width: 88%!important;
+        }
+    }
+}
+div[data-id="194ed79"]{
+    .elementor-widget-container{
+        .progress-info{
+            width: 92%!important;
+        }
+    }
+}
+div[data-id="d31501c"]{
+    .elementor-widget-container{
+        .progress-info{
+            width: 90%!important;
+        }
+    }
+}
+div[data-id="51c1c65"]{
+    .elementor-widget-container{
+        .progress-info{
+            width: 98%!important;
+        }
+    }
+}
+div[data-id="8e7712e"]{
+    .elementor-widget-container{
+        .progress-info{
+            width: 88%!important;
+        }
+    }
+}
+div[data-id="2d265be"]{
+    .elementor-widget-container{
+        .progress-info{
+            width: 93%!important;
+        }
+    }
+}
+
+
+.elementor-progress-text {
+    display: flex;
+    align-items: center;
+    flex-grow: 0 !important;
+}
+
+.elementor-progress-text::before {
+    content: url("./assets/pictos/picto-phone.svg");
+    width: 24px;
+    height: 24px;
+    display: flex;
+    position: relative;
+}
+
+.elementor-progress-percentage {
+    &::before {
+        content: '+';
+    }
+}
+
+// element bouton burger 
+
+.elementor-menu-toggle{
+    border: 2px solid #2e2f35!important;
+    border-radius: 12px!important;
+    box-shadow: 2px 2px 0 0 #000;
+}
+
+.elementor-2766 .elementor-element.elementor-element-fa21bf5 .shopengine-swatches .cart .button{
+    font-family: $font-secondary;
+}
+
+
+
+.elementor-widget-nav-menu .elementor-nav-menu--main .elementor-item:hover,
+.elementor-widget-nav-menu .elementor-nav-menu--main .elementor-item.elementor-item-active,
+.elementor-widget-nav-menu .elementor-nav-menu--main .elementor-item.highlighted,
+.elementor-widget-nav-menu .elementor-nav-menu--main .elementor-item:focus {
+    color: unset!important;
+}
+
+
+@media screen and (max-width:800px) {
+
+    .elementor-widget-progress {
+        .elementor-widget-container {
+            display:flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 1vw;
+            .progress-info .elementor-progress-bar{
+                padding: 0px 2vw;
+                .elementor-progress-text::before{
+                    display: none;
+                }
+            }
+        }
+    }
+
+}
+
+
+// cartes ecommerce 
+
+div[data-id='c1e3359'] div[data-elementor-type="loop-item"]:nth-child(2) div[data-element_type="container"] .elementor-button-wrapper a {
+    background-color: #FFB39C;
+    .elementor-button-text{
+        color:#FFE8E1;
+    }
+}
+
+div[data-id='c1e3359'] div[data-elementor-type="loop-item"]{
+    ul{
+        padding-left:1.5rem;
+    }
+}
+
+
+div[data-id='c1e3359'] div[data-elementor-type="loop-item"]:nth-child(3) div[data-element_type="container"] {
+    background-color: #FFB39C;
+}
+
+div[data-id='c1e3359'] div[data-elementor-type="loop-item"]:nth-child(3) div[data-element_type="container"] * {
+    color: #F24E1D;
+}
+
+div[data-id='c1e3359'] div[data-elementor-type="loop-item"]:nth-child(3) div[data-element_type="container"] .elementor-button-wrapper a {
+    background-color: #F24E1D;
+    .elementor-button-text{
+        color:#FFE8E1;
+    }
+}
+
+
+/*troisieme item */
+
+div[data-id='c1e3359'] div[data-elementor-type="loop-item"]:nth-child(4) div[data-element_type="container"] {
+    background-color: #F24E1D;
+}
+
+div[data-id='c1e3359'] div[data-elementor-type="loop-item"]:nth-child(4) div[data-element_type="container"] * {
+    color: #FFE8E1;
+}
+
+div[data-id='c1e3359'] div[data-elementor-type="loop-item"]:nth-child(4) div[data-element_type="container"] .elementor-button-wrapper a {
+    background-color: #FFE8E1;
+    .elementor-button-text{
+        color:#F24E1D;
+    }
+}
+
+div[data-id='c1e3359'] bdi::after {
+    content: '/carte';
+}
+
+div[data-id='c1e3359'] div[data-elementor-type="loop-item"] div[data-element_type="container"] {
+    min-height: 32vw;
+}
+
+
+@media screen and (max-width:1600px){
+    
+    div[data-id='c1e3359'] div[data-elementor-type="loop-item"] div[data-element_type="container"] {
+        min-height: 36vw;
+    }
+}
+
+
+// section grey banner 
+
+@media screen and (max-width:800px){
+
+    div[data-id="c56230e"]{
+        // border: 4px solid red;
+        .elementor-widget-container{
+            img{
+                width: 50%;
+            }
+        }
+    }
+
+}
